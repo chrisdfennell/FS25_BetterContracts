@@ -176,6 +176,7 @@
 		<text name="bc_genGreen_tooltip" text="Generate harvest contracts for peas, beans, and spinach" />
 		<text name="bc_genForage" text="Forage harvest" />
 		<text name="bc_genForage_tooltip" text="Generate harvest contracts for clover, alfalfa and grass (map crops). Uses mowers / forage harvesters" />
+		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus is active. It overrides contract generation and mission vehicles of BetterContracts. Please disable one of the two mods." />
 		<text name="bc_genRoot" text="Root crop harvest" />
 		<text name="bc_genRoot_tooltip" text="Generate harvest contracts for potatoes, sugarbeet" />
 		<text name="bc_genTree" text="Tree transport contracts" />

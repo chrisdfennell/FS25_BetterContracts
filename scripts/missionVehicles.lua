@@ -612,8 +612,18 @@ function(self, superf, connection)
 	end
 end)
 
+function BetterContracts:ensureOwnVehicles()
+	-- other mods (e.g. FS25_Contracts_Plus) reset g_missionManager.missionVehicles after
+	-- we loaded ours. Re-add our baseGame.xml groups once, if they are gone
+	if self.ownVecsChecked or self.overwrittenVehicles then return end
+	self.ownVecsChecked = true
+	if self:hasHarvestVariant("GREEN_FORAGE") then return end
+	Logging.info("[BC] mission vehicle groups were reset by another mod, re-adding BetterContracts groups")
+	self:loadExtraMissionVehicles(self.directory.."missionVehicles/baseGame.xml", self.directory)
+end
 function getGroups(m)
 	-- get all possible vehicle groups for mission m
+	BetterContracts:ensureOwnVehicles()
 	local typeName = m:getMissionTypeName()
 	local size = m:getVehicleSize()
 	local variant = m:getVehicleVariant()

@@ -162,6 +162,7 @@ function checkOtherMods(self)
 		FS25_KommunalServices = "kommunal",
 		FS25_extendedMissionInfo = "extendedInfo",
 		FS25_ActiveMissionsTime = "activeMissionsTime",
+		FS25_Contracts_Plus = "contractsPlus",
 		}
 	for mod, switch in pairs(mods) do
 		if g_modIsLoaded[mod] then
@@ -1126,6 +1127,43 @@ function BetterContracts:onStartMission()
 	end
 	self:updateGeneration() 		-- upd contract exclusions
 	self:validateMissionVehicles()	-- check mission vehicles
+	self:reportMapCrops()			-- log harvest vehicles for map/mod fruits
+
+	-- FS25_Contracts_Plus resets mission vehicles and raises generation limits (freezes on refresh)
+	if self.contractsPlus then
+		local text = g_i18n:getText("bc_conflictContractsPlus")
+		Logging.warning("[%s] %s", self.name, text)
+		if g_currentMission.addIngameNotification ~= nil then
+			g_currentMission:addIngameNotification(FSBaseMission.INGAME_NOTIFICATION_CRITICAL, text)
+		end
+		MissionManager.MAX_MISSIONS_PER_GENERATION = 4 		-- basegame values
+		MissionManager.MAX_TRIES_PER_GENERATION = 5
+		self:ensureOwnVehicles()
+	end
+end
+BetterContracts.BASE_FRUITS = {WHEAT=1, BARLEY=1, OAT=1, CANOLA=1, SORGHUM=1, SUNFLOWER=1, SOYBEAN=1,
+	MAIZE=1, POTATO=1, SUGARBEET=1, COTTON=1, SUGARCANE=1, POPLAR=1, GRASS=1, MEADOW=1, OILSEEDRADISH=1,
+	RICE=1, RICELONGGRAIN=1, SPINACH=1, PEA=1, GREENBEAN=1, CARROT=1, PARSNIP=1, BEETROOT=1, GRAPE=1, OLIVE=1,
+	ONION=1}
+function BetterContracts:reportMapCrops()
+	-- log which harvest vehicles map/mod fruits will get, so missing vehicle sets can be added
+	local lines = {}
+	for _, fruitType in ipairs(g_fruitTypeManager:getFruitTypes()) do
+		if not BetterContracts.BASE_FRUITS[fruitType.name] then
+			local variant
+			if self:isGrassLike(fruitType.index) then
+				variant = "GREEN_FORAGE (mow / forage harvester)"
+			else
+				variant = HarvestMission.getVehicleVariant({fruitTypeIndex = fruitType.index}) or "none"
+				if variant == "GRAIN" then variant = "GRAIN (combine) - check if correct" end
+			end
+			table.insert(lines, string.format("  %-16s -> %s", fruitType.name, variant))
+		end
+	end
+	if #lines > 0 then
+		Logging.info("[%s] map/mod crops and their harvest contract vehicles:\n%s",
+			self.name, table.concat(lines, "\n"))
+	end
 end
 function BetterContracts:onWriteStream(streamId)
 	-- write settings to a client when it joins

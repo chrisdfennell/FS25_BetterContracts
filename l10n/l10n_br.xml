@@ -180,6 +180,7 @@
 		<text name="bc_genGreen_tooltip" text="Gerar contratos de colheita de ervilhas, feijões e espinafre" />
 		<text name="bc_genForage" text="Colheita de forragem" />
 		<text name="bc_genForage_tooltip" text="Gera contratos de colheita para trevo, alfafa e capim (culturas do mapa). Usa segadeiras / forrageiras" />
+		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus está ativo. Ele substitui a geração de contratos e os veículos de missão do BetterContracts. Desative um dos dois mods." />
 		<text name="bc_genRoot" text="Colheita de raízes" />
 		<text name="bc_genRoot_tooltip" text="Gerar contratos de colheita de batatas, beterraba açucareira" />
 		<text name="bc_genTree" text="Contratos de transporte de árvores" />

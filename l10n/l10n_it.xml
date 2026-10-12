@@ -172,6 +172,7 @@
 		<text name="bc_genGreen_tooltip" text="Genera contratti di raccolta per piselli, fagioli e spinaci" />
 		<text name="bc_genForage" text="Raccolta foraggio" />
 		<text name="bc_genForage_tooltip" text="Genera contratti di raccolta per trifoglio, erba medica ed erba (colture della mappa). Usa falciatrici / trinciacaricatrici" />
+		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus è attivo. Sovrascrive la generazione dei contratti e i veicoli di missione di BetterContracts. Disattiva una delle due mod." />
 		<text name="bc_genRoot" text="Raccolta di colture di radici" />
 		<text name="bc_genRoot_tooltip" text="Genera contratti di raccolta per patate, barbabietole da zucchero" />
 		<text name="bc_genTree" text="Contratti di trasporto per alberi" />
