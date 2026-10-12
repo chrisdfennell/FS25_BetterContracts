@@ -174,6 +174,8 @@
 		<text name="bc_genVegetable_tooltip" text="Vytváření zakázek na sklizeň mrkve, červené řepy a pastináku." />
 		<text name="bc_genGreen" text="Sklizeň luskovin" />
 		<text name="bc_genGreen_tooltip" text="Vytváření zakázek o sklizni hrachu, fazolí a špenátu." />
+		<text name="bc_genForage" text="Sklizeň píce" />
+		<text name="bc_genForage_tooltip" text="Vytváří zakázky na sklizeň jetele, vojtěšky a trávy (plodiny mapy). Používá žací stroje / řezačky" />
 		<text name="bc_genRoot" text="Sklizeň kořenových plodin" />
 		<text name="bc_genRoot_tooltip" text="Vytváření zakázek na sklizeň brambor, cukrové řepy." />
 		<text name="bc_genTree" text="Zakázky na přepravu stromů" />

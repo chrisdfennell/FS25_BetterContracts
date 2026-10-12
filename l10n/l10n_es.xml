@@ -164,6 +164,8 @@
 		<text name="bc_genVegetable_tooltip" text="Generate harvest contracts for carrots, beetroot, and parsnip" />
 		<text name="bc_genGreen" text="Green crop harvest" />
 		<text name="bc_genGreen_tooltip" text="Generate harvest contracts for peas, beans, and spinach" />
+		<text name="bc_genForage" text="Cosecha de forraje" />
+		<text name="bc_genForage_tooltip" text="Genera contratos de cosecha para trébol, alfalfa y hierba (cultivos del mapa). Usa segadoras / picadoras" />
 		<text name="bc_genRoot" text="Root crop harvest" />
 		<text name="bc_genRoot_tooltip" text="Generate harvest contracts for potatoes, sugarbeet" />
 		<text name="bc_genTree" text="Tree transport contracts" />

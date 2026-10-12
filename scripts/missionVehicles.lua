@@ -50,6 +50,8 @@ function BetterContracts.loadMissionVehicles(missionManager, superFunc, xmlFilen
 		self:checkExtraMissionVehicles(self.directory .. "missionVehicles/baseGame.xml",baseDir)
 		self:loadExtraMissionVehicles(self.directory.."missionVehicles/baseGame.xml", baseDir)
 		self.loadedVehicles = true
+		debugPrint("[BC] GREEN_FORAGE harvest vehicle groups loaded: %s",
+			tostring(self:hasHarvestVariant("GREEN_FORAGE")))
 
 		-- determine userdef location: modSettings/FS25_BetterContracts/<mapName>/ 
 		local map = g_currentMission.missionInfo.map
@@ -615,6 +617,11 @@ function getGroups(m)
 	local typeName = m:getMissionTypeName()
 	local size = m:getVehicleSize()
 	local variant = m:getVehicleVariant()
+	if typeName == "harvestMission" and BetterContracts:isGrassLike(m.fruitTypeIndex)
+		and BetterContracts:hasHarvestVariant("GREEN_FORAGE") then
+		-- clover etc: don't rely on basegame variant (would be GRAIN = combine)
+		variant = "GREEN_FORAGE"
+	end
 	local typeGroups = g_missionManager.missionVehicles[typeName]
 	debugPrint("* getGroups: %s %s %s",typeName,size,variant)
 	local groups = {}

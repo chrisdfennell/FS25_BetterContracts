@@ -172,6 +172,8 @@
 		<text name="bc_genVegetable_tooltip" text="Lav høst kontrakter for gulerødder, rødbeder, og pastinak" />
 		<text name="bc_genGreen" text="Grøn afgrøde høst" />
 		<text name="bc_genGreen_tooltip" text="Lav høst kontrakter for ærter, bønner, og spinat" />
+		<text name="bc_genForage" text="Grovfoderhøst" />
+		<text name="bc_genForage_tooltip" text="Opretter høstkontrakter for kløver, lucerne og græs (kortafgrøder). Bruger skårlæggere / finsnittere" />
 		<text name="bc_genRoot" text="Rod afgrøde høst" />
 		<text name="bc_genRoot_tooltip" text="Lav høst kontrakter for kartofler, sukerroer" />
 		<text name="bc_genTree" text="Træ transport kontrakter" />

@@ -168,6 +168,8 @@
 		<text name="bc_genVegetable_tooltip" text="Генерирование контрактов на сбор урожая моркови, свеклы и пастернака" />
 		<text name="bc_genGreen" text="Сбор урожая зеленых культур" />
 		<text name="bc_genGreen_tooltip" text="Генерирование контрактов на сбор урожая гороха, фасоли и шпината" />
+		<text name="bc_genForage" text="Уборка кормовых" />
+		<text name="bc_genForage_tooltip" text="Создаёт контракты на уборку клевера, люцерны и травы (культуры карты). Использует косилки / кормоуборочные комбайны" />
 		<text name="bc_genRoot" text="Сбор корнеплодов" />
 		<text name="bc_genRoot_tooltip" text="Генерирование контрактов на сбор урожая картофеля, сахарной свеклы" />
 		<text name="bc_genTree" text="Транспортные контракты" />

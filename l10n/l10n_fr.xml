@@ -155,6 +155,8 @@
 		<text name="bc_genVegetable_tooltip" text="Générer des missions de récolte pour les carottes, betteraves, panais et oignons" />
 		<text name="bc_genGreen" text="Récolte de cultures Maraichères" />
 		<text name="bc_genGreen_tooltip" text="Générer des missions de récolte pour les haricots, épinards et pois" />
+		<text name="bc_genForage" text="Récolte de fourrage" />
+		<text name="bc_genForage_tooltip" text="Génère des missions de récolte pour le trèfle, la luzerne et l'herbe (cultures de carte). Utilise faucheuses / ensileuses" />
 		<text name="bc_genRoot" text="Récolte de cultures Racinaires" />
 		<text name="bc_genRoot_tooltip" text="Générer des missions de récolte pour les pommes de terres (patates), et betteraves à sucre" />
 		<text name="bc_genTree" text="Mission de transport de bois" />

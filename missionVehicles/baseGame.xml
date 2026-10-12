@@ -177,6 +177,84 @@
 				<configuration name="design6" id="4"/>
 			</vehicle>	<!-- truck -->
 			<vehicle filename="$data/vehicles/krampe/sks30_150/sks30_150.xml" />		</group>
+
+		<!-- green forage (map fruits like clover, alfalfa): mow + loader wagon, or forage harvester -->
+		<group size="small" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/johnDeere/series6R/series6RLarge.xml">
+				<configuration name="motor" id="3"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/samasz/kdf341S/kdf341S.xml"/> 	<!-- front mower -->
+			<vehicle filename="$data/vehicles/samasz/xt390/xt390.xml"/> 	<!-- mower -->
+			<vehicle filename="$data/vehicles/same/virtus135RVShift/virtus135RVShift.xml"/> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/fendt/tigo75VR/tigo75VR.xml"/> 	<!-- loader wagon -->
+		</group>
+		<group size="medium" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/fendt/vario700/vario700.xml">
+				<configuration name="motor" id="2"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/kuhn/gmd3123F/gmd3123F.xml"/> 	<!-- front mower -->
+			<vehicle filename="$data/vehicles/kuhn/gmd8730/gmd8730.xml"/> 	<!-- butterfly mower -->
+			<vehicle filename="$data/vehicles/valtra/sSeries/sSeries.xml"/> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/poettinger/jumbo8450DB/jumbo8450DB.xml"/> 	<!-- loader wagon -->
+		</group>
+		<group size="small" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/same/virtus135RVShift/virtus135RVShift.xml"/> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/vermeer/tm1410/tm1410.xml"/> 	<!-- mower -->
+			<vehicle filename="$data/vehicles/valtra/sSeries/sSeries.xml"/> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/poettinger/bossAlpin251/bossAlpin251.xml"/> 	<!-- loader wagon -->
+		</group>
+		<group size="small" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/claas/jaguar990TT/jaguar990TT.xml"/> 	<!-- forage harvester -->
+			<vehicle filename="$data/vehicles/claas/directDisc500/directDisc500.xml"/> 	<!-- direct cutter -->
+			<vehicle filename="$data/vehicles/johnDeere/series6R/series6RLarge.xml">
+				<configuration name="motor" id="3"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/poettinger/faro4010D/faro4010D.xml"/> 	<!-- loader wagon as trailer -->
+		</group>
+		<group size="medium" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/samasz/kdf341S/kdf341S.xml"/> 	<!-- front mower -->
+			<vehicle filename="$data/vehicles/samasz/kdd941STH/kdd941STH.xml"/> 	<!-- butterfly mower -->
+			<vehicle filename="$data/vehicles/masseyFerguson/series9S/series9S.xml">
+				<configuration name="motor" id="4"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/fendt/vario700/vario700.xml">
+				<configuration name="motor" id="2"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/schuitemaker/rapide580V/rapide580V.xml"/> 	<!-- loader wagon -->
+		</group>
+		<group size="medium" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/claas/jaguar990TT/jaguar990TT.xml"/> 	<!-- forage harvester -->
+			<vehicle filename="$data/vehicles/claas/directDisc500/directDisc500.xml"/> 	<!-- direct cutter -->
+			<vehicle filename="$data/vehicles/valtra/sSeries/sSeries.xml"/> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/bergmann/shuttle490S/shuttle490S.xml"/> 	<!-- loader wagon as trailer -->
+		</group>
+		<group size="large" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/krone/bigX1180/bigX1180.xml"/> 	<!-- forage harvester -->
+			<vehicle filename="$data/vehicles/krone/xDisc620/xDisc620.xml"/> 	<!-- direct cutter -->
+			<vehicle filename="$data/vehicles/fendt/vario700/vario700.xml">
+				<configuration name="motor" id="2"/>
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/rudolphSohn/tdk301RP/tdk301RP.xml" /> <!-- trailer -->
+			<vehicle filename="$data/vehicles/rudolphSohn/tdk301RP/tdk301RP.xml" /> <!-- trailer -->
+		</group>
+		<group size="large" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/krone/bigM450/bigM450.xml"/> 	<!-- self propelled mower -->
+			<vehicle filename="$data/vehicles/claas/jaguar990TT/jaguar990TT.xml"/> 	<!-- forage harvester -->
+			<vehicle filename="$data/vehicles/claas/pickUp300/pickUp300.xml"/> 	<!-- windrow pickup -->
+			<vehicle filename="$data/vehicles/johnDeere/series8R/series8R.xml">
+				<configuration name="motor" id="2" />
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/rudolphSohn/tdk301RP/tdk301RP.xml" /> <!-- trailer -->
+		</group>
+		<group size="large" variant="GREEN_FORAGE">
+			<vehicle filename="$data/vehicles/newHolland/fr780/fr780.xml"/> 	<!-- forage harvester -->
+			<vehicle filename="$data/vehicles/newHolland/fb130/fb130.xml"/> 	<!-- direct cutter -->
+			<vehicle filename="$data/vehicles/johnDeere/series8R/series8R.xml">
+				<configuration name="motor" id="2" />
+			</vehicle> 	<!-- tractor -->
+			<vehicle filename="$data/vehicles/rudolphSohn/tdk301RP/tdk301RP.xml" /> <!-- trailer -->
+			<vehicle filename="$data/vehicles/rudolphSohn/tdk301RP/tdk301RP.xml" /> <!-- trailer -->
+		</group>
 	</mission>
 
 	<mission type="plowMission">

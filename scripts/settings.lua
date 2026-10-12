@@ -51,6 +51,7 @@ ControlProperties = {
     { name = "genRoot", autoBind = true },  		-- potato, sugarbeet
     { name = "genVegetable", autoBind = true },  	-- parsnip, carrot
     { name = "genGreen", autoBind = true },  		-- peas, spinach, beans
+    { name = "genForage", autoBind = true },  		-- clover, alfalfa, grass (map fruits)
     { name = "genTree", autoBind = true }, 			-- tree transport
     { name = "genDead", autoBind = true },
     { name = "genRock", autoBind = true },
