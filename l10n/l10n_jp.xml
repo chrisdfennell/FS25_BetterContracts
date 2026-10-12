@@ -159,6 +159,8 @@
 		<text name="bc_genGreen_tooltip" text="Generate harvest contracts for peas, beans, and spinach" />
 		<text name="bc_genForage" text="牧草の収穫" />
 		<text name="bc_genForage_tooltip" text="クローバー、アルファルファ、牧草（マップ作物）の収穫契約を生成します。モア / フォレージハーベスターを使用" />
+		<text name="bc_pfYield" text="Precision Farming 収量" />
+		<text name="bc_pfYield_tooltip" text="Precision Farming が有効な場合に収穫契約で使う予想収穫量の割合。値を下げると現実的な収量でも契約を達成しやすくなります" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus が有効です。BetterContracts の契約生成とミッション車両を上書きします。どちらかの MOD を無効にしてください。" />
 		<text name="bc_genRoot" text="Root crop harvest" />
 		<text name="bc_genRoot_tooltip" text="Generate harvest contracts for potatoes, sugarbeet" />

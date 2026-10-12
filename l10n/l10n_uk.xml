@@ -167,6 +167,8 @@
 		<text name="bc_genGreen_tooltip" text="Генерування контрактів на збирання врожаю гороху, квасолі та шпинату" />
 		<text name="bc_genForage" text="Збирання кормових" />
 		<text name="bc_genForage_tooltip" text="Створює контракти на збирання конюшини, люцерни та трави (культури мапи). Використовує косарки / кормозбиральні комбайни" />
+		<text name="bc_pfYield" text="Врожайність Precision Farming" />
+		<text name="bc_pfYield_tooltip" text="Частка очікуваного врожаю для контрактів на збирання, якщо активний Precision Farming. Менші значення спрощують виконання контрактів за реалістичної врожайності" />
 		<text name="bc_conflictContractsPlus" text="Активний FS25_Contracts_Plus. Він перевизначає створення контрактів і техніку місій BetterContracts. Вимкніть один із двох модів." />
 		<text name="bc_genRoot" text="Збір коренеплодів" />
 		<text name="bc_genRoot_tooltip" text="Генерування контрактів на збирання врожаю картоплі, цукрових буряків" />

@@ -182,6 +182,8 @@
 		<text name="bc_genGreen_tooltip" text="Generuj kontrakty na zbiór grochu, fasoli i szpinaku" />
 		<text name="bc_genForage" text="Zbiór zielonki" />
 		<text name="bc_genForage_tooltip" text="Generuje kontrakty żniwne na koniczynę, lucernę i trawę (uprawy mapy). Używa kosiarek / sieczkarni" />
+		<text name="bc_pfYield" text="Plon Precision Farming" />
+		<text name="bc_pfYield_tooltip" text="Udział oczekiwanego plonu w kontraktach żniwnych, gdy Precision Farming jest aktywny. Niższe wartości ułatwiają realizację kontraktów przy realistycznych plonach" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus jest aktywny. Nadpisuje generowanie kontraktów i pojazdy misji BetterContracts. Wyłącz jeden z tych modów." />
 		<text name="bc_genRoot" text="Zbiór roślin okopowych" />
 		<text name="bc_genRoot_tooltip" text="Generuj kontrakty na zbiór ziemniaków, buraków cukrowych" />

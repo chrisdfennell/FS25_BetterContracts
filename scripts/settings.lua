@@ -23,6 +23,8 @@ ControlProperties = {
     { name = "fieldCompletion", min = 0.8, max = 0.985, step = 0.03, unit= "%", autoBind = true },
     -- basegame: HarvestMission.SUCCESS_FACTOR = 0.93
     { name = "toDeliver", min = 0.7, max = 0.945, step = 0.03, unit= "%", autoBind = true },
+    -- only used with FS25_precisionFarming: lower yields make harvest contracts hard to fulfill
+    { name = "pfYield", min = 0.7, max = 1.01, step = 0.05, unit= "%", autoBind = true },
     { name = "refreshMP", values = {"ui_admin","ui_farmManager","ui_players"}, autoBind = true },
     { name = "ferment", autoBind = true },
     { name = "forcePlow", autoBind = true },

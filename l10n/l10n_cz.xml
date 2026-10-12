@@ -176,6 +176,8 @@
 		<text name="bc_genGreen_tooltip" text="Vytváření zakázek o sklizni hrachu, fazolí a špenátu." />
 		<text name="bc_genForage" text="Sklizeň píce" />
 		<text name="bc_genForage_tooltip" text="Vytváří zakázky na sklizeň jetele, vojtěšky a trávy (plodiny mapy). Používá žací stroje / řezačky" />
+		<text name="bc_pfYield" text="Výnos Precision Farming" />
+		<text name="bc_pfYield_tooltip" text="Podíl očekávané sklizně pro zakázky na sklizeň, pokud je aktivní Precision Farming. Nižší hodnoty usnadňují splnění zakázek při realistických výnosech" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus je aktivní. Přepisuje generování zakázek a vozidla misí BetterContracts. Vypněte prosím jeden z obou modů." />
 		<text name="bc_genRoot" text="Sklizeň kořenových plodin" />
 		<text name="bc_genRoot_tooltip" text="Vytváření zakázek na sklizeň brambor, cukrové řepy." />

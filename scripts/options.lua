@@ -104,7 +104,7 @@ end
 function harvestCompletion(self,superf)
 	-- overwrites HarvestMission:getCompletion()
 	local sellCompletion = 
-	 math.min(self.depositedLiters / self.expectedLiters / HarvestMission.SUCCESS_FACTOR, 1)
+	 math.min(self.depositedLiters / BetterContracts:getExpectedLiters(self) / HarvestMission.SUCCESS_FACTOR, 1)
 	local harvestCompletion = math.min(getCompletion(self), 1)
 	return math.min(1, 0.8 * harvestCompletion + 0.2 * sellCompletion)
 end
@@ -460,7 +460,7 @@ function BetterContracts:showProgressBars(contract, on)
 	self.my.prog1:setText(string.format("  %.0f%%", m.fieldPercentageDone * 100))
 	updateBar(self.my.progressBar1, fullwidth, m.fieldPercentageDone)
 
-	local deliverPercent = m.depositedLiters/(m.expectedLiters- (m.info.keep or 0))
+	local deliverPercent = m.depositedLiters/(BetterContracts:getExpectedLiters(m)- (m.info.keep or 0))
 	self.my.prog2:setText(string.format("  %.0f%%", deliverPercent * 100))
 	updateBar(self.my.progressBar2, fullwidth, deliverPercent)
 end

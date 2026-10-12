@@ -193,6 +193,7 @@ function registerXML(self)
 	self.xmlSchema:register(XMLValueType.FLOAT, self.baseXmlKey.."#lease")
 	self.xmlSchema:register(XMLValueType.FLOAT, self.baseXmlKey.."#deliver")
 	self.xmlSchema:register(XMLValueType.FLOAT, self.baseXmlKey.."#deliverBale")
+	self.xmlSchema:register(XMLValueType.FLOAT, self.baseXmlKey.."#pfYield")
 	self.xmlSchema:register(XMLValueType.FLOAT, self.baseXmlKey.."#fieldCompletion")
 
 	local key = self.baseXmlKey..".lazyNPC"
@@ -248,6 +249,7 @@ function readconfig(self)
 		self.config.leaseMultiplier = xmlFile:getValue(key.."#lease", 1.)
 		self.config.toDeliver = xmlFile:getValue(key.."#deliver", 0.94)
 		self.config.toDeliverBale = xmlFile:getValue(key.."#deliverBale", 0.90)
+		self.config.pfYield = xmlFile:getValue(key.."#pfYield", 1.0)
 		self.config.fieldCompletion = xmlFile:getValue(key.."#fieldCompletion", 0.95)
 		self.config.refreshMP =	xmlFile:getValue(key.."#refreshMP", 2)		
 		self.config.lazyNPC = 	xmlFile:getValue(key.."#lazyNPC", false)
@@ -477,6 +479,7 @@ function BetterContracts:initialize()
 		leaseMultiplier = 1.,		-- general lease cost multiplier
 		toDeliver = 0.94,			-- HarvestMission.SUCCESS_FACTOR
 		toDeliverBale = 0.90,		-- BaleMission.FILL_SUCCESS_FACTOR
+		pfYield = 1.0,				-- harvest amount to deliver, if PrecisionFarming is active
 		fieldCompletion = 0.95,		-- AbstractMission.SUCCESS_FACTOR
 		fieldSize = 0.5,			-- threshold from "small" to "med" size field
 		generationInterval = 1, 	-- MissionManager.MISSION_GENERATION_INTERVAL
@@ -705,9 +708,18 @@ function BetterContracts:getFilltypePrice(m)
 		self.ft[fillType] and self.ft[fillType].title or "unknown")
 	return 0
 end
+function BetterContracts:getExpectedLiters(m)
+	-- harvest amount for mission m. Reduced by setting pfYield if PrecisionFarming is active,
+	-- because its (realistic) yields often don't reach the basegame expected amount
+	local liters = m.expectedLiters or 0
+	if g_modIsLoaded.FS25_precisionFarming and m.type ~= nil and m.type.name == "harvestMission" then
+		liters = liters * (self.config.pfYield or 1)
+	end
+	return liters
+end
 function BetterContracts:calcProfit(m, successFactor)
 	-- calculate addtl income as value of kept harvest
-	local keep = math.floor(m.expectedLiters *(1 - successFactor))
+	local keep = math.floor(self:getExpectedLiters(m) *(1 - successFactor))
 	local price = self:getFilltypePrice(m)
 	return keep, price, keep * price
 end
@@ -763,7 +775,7 @@ function addMission(self, mission)
 				factor = bc.baleCollectMission.data.ownTable.SUCCESS_FACTOR
 			end
 			info.keep, info.price, info.profit = bc:calcProfit(mission, factor)
-			info.deliver = math.ceil(mission.expectedLiters - info.keep) 	--must be delivered
+			info.deliver = math.ceil(bc:getExpectedLiters(mission) - info.keep) 	--must be delivered
 		end  	
 		info.perMin = (mission:getReward() + info.profit) /info.worktime *60
 
@@ -867,7 +879,8 @@ function harvestGetDetails(self, superf)
 	end
 	-- add our values to show in contract details list
 	local price = BetterContracts:getFilltypePrice(self)
-	local deliver = self.expectedLiters - self.info.keep
+	local expected = BetterContracts:getExpectedLiters(self)
+	local deliver = expected - self.info.keep
 	local eta = {}
 
 	if self.status == MissionStatus.RUNNING then
@@ -875,7 +888,7 @@ function harvestGetDetails(self, superf)
 		if self.depositedLiters then depo = self.depositedLiters end
 		depo = MathUtil.round(depo / 100) * 100
 		-- don't show negative togos:
-		local togo = math.max(MathUtil.round((self.expectedLiters -self.info.keep -depo)/100)*100, 0)
+		local togo = math.max(MathUtil.round((expected -self.info.keep -depo)/100)*100, 0)
 		eta = {
 			["title"] = g_i18n:getText("SC_delivered"),
 			["value"] = g_i18n:formatVolume(depo)
@@ -1269,6 +1282,7 @@ function saveSavegame()
 	xmlFile:setFloat( key.."#lease", 		  conf.leaseMultiplier)
 	xmlFile:setFloat( key.."#deliver", 		  conf.toDeliver)
 	xmlFile:setFloat( key.."#deliverBale", 	  conf.toDeliverBale)
+	xmlFile:setFloat( key.."#pfYield", 		  conf.pfYield)
 	xmlFile:setFloat( key.."#fieldCompletion",conf.fieldCompletion)
 	xmlFile:setInt  ( key.."#refreshMP",	  conf.refreshMP)
 	xmlFile:setBool ( key.."#lazyNPC", 		  conf.lazyNPC)

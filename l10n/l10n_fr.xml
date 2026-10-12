@@ -157,6 +157,8 @@
 		<text name="bc_genGreen_tooltip" text="Générer des missions de récolte pour les haricots, épinards et pois" />
 		<text name="bc_genForage" text="Récolte de fourrage" />
 		<text name="bc_genForage_tooltip" text="Génère des missions de récolte pour le trèfle, la luzerne et l'herbe (cultures de carte). Utilise faucheuses / ensileuses" />
+		<text name="bc_pfYield" text="Rendement Precision Farming" />
+		<text name="bc_pfYield_tooltip" text="Part de la récolte attendue utilisée pour les contrats de récolte, si Precision Farming est actif. Des valeurs plus basses facilitent les contrats avec des rendements réalistes" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus est actif. Il remplace la génération de contrats et les véhicules de mission de BetterContracts. Veuillez désactiver l'un des deux mods." />
 		<text name="bc_genRoot" text="Récolte de cultures Racinaires" />
 		<text name="bc_genRoot_tooltip" text="Générer des missions de récolte pour les pommes de terres (patates), et betteraves à sucre" />

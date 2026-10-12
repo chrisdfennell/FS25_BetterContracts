@@ -178,6 +178,8 @@
 		<text name="bc_genGreen_tooltip" text="生成豌豆、豆类和菠菜的收获合同" />
 		<text name="bc_genForage" text="Sklizeň píce" />
 		<text name="bc_genForage_tooltip" text="Vytváří zakázky na sklizeň jetele, vojtěšky a trávy (plodiny mapy). Používá žací stroje / řezačky" />
+		<text name="bc_pfYield" text="Výnos Precision Farming" />
+		<text name="bc_pfYield_tooltip" text="Podíl očekávané sklizně pro zakázky na sklizeň, pokud je aktivní Precision Farming. Nižší hodnoty usnadňují splnění zakázek při realistických výnosech" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus je aktivní. Přepisuje generování zakázek a vozidla misí BetterContracts. Vypněte prosím jeden z obou modů." />
 		<text name="bc_genRoot" text="根茎作物收获" />
 		<text name="bc_genRoot_tooltip" text="生成土豆、甜菜的收获合同" />

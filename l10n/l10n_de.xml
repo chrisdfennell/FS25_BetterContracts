@@ -175,6 +175,8 @@
 		<text name="bc_genGreen_tooltip" text="Erzeugt Ernte-Aufträge für Bohnen, Erbsen und Spinat" />
 		<text name="bc_genForage" text="Grünfutter-Ernte" />
 		<text name="bc_genForage_tooltip" text="Erzeugt Ernte-Aufträge für Klee, Luzerne und Gras (Karten-Früchte). Nutzt Mähwerke / Feldhäcksler" />
+		<text name="bc_pfYield" text="Precision Farming Ertrag" />
+		<text name="bc_pfYield_tooltip" text="Anteil der erwarteten Erntemenge für Ernteverträge, wenn Precision Farming aktiv ist. Kleinere Werte machen Verträge bei realistischen Erträgen leichter erfüllbar" />
 		<text name="bc_conflictContractsPlus" text="FS25_Contracts_Plus ist aktiv. Es überschreibt die Vertragserzeugung und Leihfahrzeuge von BetterContracts. Bitte eine der beiden Mods deaktivieren." />
 		<text name="bc_genRoot" text="Wurzelfrucht-Ernte" />
 		<text name="bc_genRoot_tooltip" text="Erzeugt Ernte-Aufträge für Kartoffeln und Zuckerrüben" />
